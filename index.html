@@ -1,11 +1,220 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ссылки на разработческие платформы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .link-card {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: #4a6fa5;
+        }
+        
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .github-icon {
+            background-color: #333;
+        }
+        
+        .gitlab-icon {
+            background-color: #fc6d26;
+        }
+        
+        .stackblitz-icon {
+            background: linear-gradient(45deg, #1389FD, #7B42F6);
+        }
+        
+        .link-info {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .link-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .link-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .arrow {
+            font-size: 24px;
+            color: #4a6fa5;
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .link-card:hover .arrow {
+            transform: translateX(5px);
+        }
+        
+        footer {
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .link-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .link-info {
+                text-align: center;
+            }
+            
+            .arrow {
+                display: none;
+            }
+        }
+    </style>
 </head>
-
 <body>
-<img src="banner.png" border="10" alt='рисунок на странице'>
- <A href="https://www.figma.com/proto/whgagBdHJOx69VCoLCDace/Untitled?node-id=1-2&t=nvQLXQ10cukoK030-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">Прототип на фигма</A>
+    <div class="container">
+        <h1>Платформы для разработчиков</h1>
+        <p class="subtitle">Перейдите к выбранной платформе, нажав на соответствующую карточку</p>
+        
+        <div class="links-container">
+            <!-- GitHub ссылка -->
+            <a href="https://github.com" target="_blank" class="link-card">
+                <div class="icon github-icon">
+                    GH
+                </div>
+                <div class="link-info">
+                    <h2 class="link-title">GitHub</h2>
+                    <p class="link-description">
+                        Крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки с использованием системы контроля версий Git.
+                    </p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+            
+            <!-- GitLab ссылка -->
+            <a href="https://gitlab.com" target="_blank" class="link-card">
+                <div class="icon gitlab-icon">
+                    GL
+                </div>
+                <div class="link-info">
+                    <h2 class="link-title">GitLab</h2>
+                    <p class="link-description">
+                        Веб-инструмент жизненного цикла DevOps с открытым исходным кодом, предоставляющий функцию Git-репозитория, wiki, отслеживания проблем и CI/CD конвейера.
+                    </p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+            
+            <!-- StackBlitz ссылка -->
+            <a href="https://stackblitz.com" target="_blank" class="link-card">
+                <div class="icon stackblitz-icon">
+                    SB
+                </div>
+                <div class="link-info">
+                    <h2 class="link-title">StackBlitz</h2>
+                    <p class="link-description">
+                        Онлайн-редактор для веб-приложений, позволяющий создавать, редактировать и развертывать проекты прямо в браузере с поддержкой Node.js, React, Angular и других технологий.
+                    </p>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+        </div>
+        
+        <footer>
+            <p>Все ссылки открываются в новой вкладке</p>
+            <p>© 2023 Платформы для разработчиков</p>
+        </footer>
+    </div>
 </body>
-  
 </html>
